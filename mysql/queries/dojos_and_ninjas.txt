@@ -1,0 +1,48 @@
+select * from dojos;
+insert into dojos(id, name, created_at, updated_at)
+values (1, 'Michael', now(), now());
+insert into dojos(id, name, created_at, updated_at)
+values (2, 'Kasane', now(), now());
+insert into dojos(id, name, created_at, updated_at)
+values (3, 'John', now(), now());
+
+delete from dojos
+where id = 1 or 2 or 3;
+
+insert into dojos(id, name, created_at, updated_at)
+values (1, 'Sara', now(), now());
+insert into dojos(id, name, created_at, updated_at)
+values (2, 'Naomi', now(), now());
+insert into dojos(id, name, created_at, updated_at)
+values (3, 'Avery', now(), now());
+
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (1, 'Michael', 'Munson', 20, now(), now(), 1);
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (2, 'Kobe', 'Bryant', 32, now(), now(), 1);
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (3, 'Von', 'Bartle', 40, now(), now(), 1);
+
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (4, 'Turtles', 'Rock', 80, now(), now(), 2);
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (5, 'Emily', 'Caldwin', 22, now(), now(), 2);
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (6, 'Miles', 'Morales', 18, now(), now(), 2);
+
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (7, 'Bob', 'Ross', 53, now(), now(), 3);
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (8, 'Oil', 'Change', 68, now(), now(), 3);
+insert into ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+values (9, 'Luca', 'Toretto', 32, now(), now(), 3);
+
+select * from ninjas
+where dojo_id = 1
+
+select * from ninjas
+where dojo_id = 3
+
+select * from ninjas
+order by id desc
+limit  1

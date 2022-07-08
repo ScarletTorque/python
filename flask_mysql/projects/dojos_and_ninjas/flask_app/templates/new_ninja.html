@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos and Ninjas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>This is the new ninjas page</h1>  
+
+        <form action="/create_ninja" method="post">
+
+
+            <label for="Dojos">Dojos</label>
+            <select name="Dojos_id" id="Dojos">
+                {% for dojo in dojos %}
+                <option value="{{ dojo.id }}">{{dojo.name}}</option>
+                {% endfor%}
+            </select>
+
+            <label>First Name:</label>
+            <input type="text" name="Fname">
+
+            <label>Last Name:</label>
+            <input type="text" name="Lname">
+
+            <label>Age:</label>
+            <input type="number" name="Age">
+
+            <!-- <label for="Dojos">Dojos</label>
+            <select name="Dojos" id="Dojos">
+                {% for one_user in all_users %}
+                <option value="{{one_user.Dojo}}">{{one_user.Dojo}}</option>
+                {% endfor %}
+            </select> -->
+
+
+
+            <input class="btn btn-primary" type="submit" value="Create">
+        </form>
+        <a href="/dojos">Home</a>
+    </div>
+</body>
+</html>
